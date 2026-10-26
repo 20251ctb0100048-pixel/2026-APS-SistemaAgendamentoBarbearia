@@ -1,0 +1,57 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Diagrama de Classes" id="classes">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="cliente" value="Cliente&#xa;----------------&#xa;nome: String&#xa;----------------&#xa;+ cadastrar(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="220" height="130" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="barbeiro" value="Barbeiro&#xa;----------------&#xa;nome: String&#xa;----------------&#xa;+ cadastrar(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="320" width="220" height="130" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="servico" value="Servico&#xa;----------------&#xa;nome: String&#xa;----------------&#xa;+ cadastrar(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="750" y="320" width="220" height="130" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="agendamento" value="Agendamento&#xa;----------------&#xa;data: Date&#xa;horario: Time&#xa;----------------&#xa;+ criar(): void&#xa;+ verificarDisponibilidade(): boolean&#xa;+ consultar(): void&#xa;+ cancelar(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="700" y="80" width="320" height="190" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" value="possui" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;" edge="1" parent="1" source="cliente" target="agendamento">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1a" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;" vertex="1" connectable="0" parent="e1">
+          <mxGeometry x="-0.85" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1b" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;" vertex="1" connectable="0" parent="e1">
+          <mxGeometry x="0.85" relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e2" value="possui" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;" edge="1" parent="1" source="barbeiro" target="agendamento">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2a" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;" vertex="1" connectable="0" parent="e2">
+          <mxGeometry x="-0.85" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2b" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;" vertex="1" connectable="0" parent="e2">
+          <mxGeometry x="0.85" relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e3" value="aparece em" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;" edge="1" parent="1" source="servico" target="agendamento">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3a" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;" vertex="1" connectable="0" parent="e3">
+          <mxGeometry x="-0.85" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3b" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;" vertex="1" connectable="0" parent="e3">
+          <mxGeometry x="0.85" relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
